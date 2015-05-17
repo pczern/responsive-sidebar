@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slider example</title>
+    <style type="text/css">
+      body{
+        font-size: 16px;
+      }
+      *{
+        padding: 0%;
+        margin: 0%;
+      }
+      #sidebar{
+        display: none; /* if here not display: none then it would appear everytime the sidebar is closed (Adds more customization) */
+        background-color: #000088;
+        font-size: 2em;
+      }
+      </style>
+  </head>
+  <body>
+    <h1>responsive-sidebar</h1>
+    <h2>JavaScript sidebar component using CSS3 for smooth animations</h2>
+    <h3>Coded without any JavaScript librarys for best performance<br>Supports most browsers including IE8</h3>
+    <p>Features</p>
+    <ul>
+      <li>Open Source</li>
+      <li>CSS3 Animations</li>
+      <li>Provides fallback to support old browsers including IE8</li>
+      <li>Uses absolute positioning because of bug in fixed positioning in most mobile browsers</li>
+    </ul>
+    <div id="sidebar">
+      <p>This is responsive-sidebar</p>
+    </div>
+    <button id="sidebar-toggle">Toggle</button>
+
+
+    <!-- Include responsive-sidebar -->
+    <script src="responsive-sidebar.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      // ready function
+      function ready(fn) {
+        if (document.readyState != 'loading'){
+          fn();
+        } else if (document.addEventListener) {
+          document.addEventListener('DOMContentLoaded', fn);
+        } else {
+          document.attachEvent('onreadystatechange', function() {
+          if (document.readyState != 'loading')
+            fn();
+          });
+        }
+      }
+
+      ready(fn);
+
+      // called when DOMContentLoaded
+      function fn(){
+
+        // Creates a new sidebar
+        // Parameters: new Sidebar(sidebarSelector, [toggleButton1Selector, toggleButton2Selector], options)
+        // Remember the sidebar selector should be unique otherwise there would multiple sidebars assigned to one toggleButton but you can create multiple sidebars with creating more Sidebar objects
+        var sidebar = new Sidebar('#sidebar', ['#sidebar-toggle'], 
+          {
+            time: 1000, // duration of the CSS animation in ms - default 1000
+            width: '60%', // width of the sidebar in every CSS compatible notation - default 80%
+            animationTimingFunction: 'cubic-bezier(.37,1,.71,.38)',  // specifies your sidebar CSS3 animation timing function - default ease-in
+            overlayStyles: // Styles for the overlay (You can add every possible CSS style here)
+            {
+              backgroundColor: '#222',
+              opacity: 0.9
+            }
+          }
+        );
+
+        // responsive-sidebar also allows methods for opening and closing
+        // sidebar.open() // opens the Sidebar
+        // sidebar.close() // closes the Sidebar
+        // sidebar.dispose() // disposes listeners (not working in IE8)
+      }
+    </script>
+  </body>
+</html>
