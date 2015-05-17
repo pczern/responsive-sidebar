@@ -1,6 +1,6 @@
 # responsive-sidebar
 **JavaScript sidebar component using CSS3 for smooth animations.
-Coded without any JavaScript librarys for best performance.
+Coded without any JavaScript libraries for best performance.
 Supports most browsers including IE8**
 ## Usage
 Embed responsive-sidebar.js in your .html file
@@ -10,7 +10,7 @@ Embed responsive-sidebar.js in your .html file
 and call the constructor: Sidebar
 ```
 <script type="text/javascript">
-  var sidebar = new Sidebar('#sidebar', ['#sidebar-toggle'], 
+  var sidebar = new Sidebar('#sidebar', ['#sidebar-toggle1', '#sidebar-toggle2', '#sidebar-toggle3'], 
           {
             time: 1000, // duration of the CSS animation in ms - default 1000
             width: '60%', // width of the sidebar in every CSS compatible notation - default 80%
