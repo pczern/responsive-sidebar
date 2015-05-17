@@ -1,6 +1,6 @@
 # responsive-sidebar
-**JavaScript sidebar component using CSS3 for smooth animations
-Coded without any JavaScript librarys for best performance
+**JavaScript sidebar component using CSS3 for smooth animations.
+Coded without any JavaScript librarys for best performance.
 Supports most browsers including IE8**
 ## Usage
 Embed responsive-sidebar.js in your .html file
@@ -26,9 +26,9 @@ and call the constructor: Sidebar
 ```
 ## Methods
 ```
-- sidebar.open() // opens the sidebar
-- sidebar.close() // closes the sidebar
-- sidebar.dispose() // disposes listeners (not working in IE8)
+sidebar.open() // opens the sidebar
+sidebar.close() // closes the sidebar
+sidebar.dispose() // disposes listeners (not working in IE8)
 ```
 ## Features
 - Open Source under the MIT license
