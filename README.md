@@ -8,7 +8,7 @@ Embed responsive-sidebar.js in your .html file
 <script src="responsive-sidebar.js" type="text/javascript"></script>
 ```
 and call the constructor: Sidebar
-```javascript
+```html
 <script type="text/javascript">
   var sidebar = new Sidebar('#sidebar', ['#sidebar-toggle1', '#sidebar-toggle2', '#sidebar-toggle3'], {
         time: 1000, // duration of the CSS animation in ms - default 1000
