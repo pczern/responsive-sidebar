@@ -47,8 +47,7 @@ function Sidebar(sidebar, buttons, options){
       top: '0px', 
       left: '0px', 
       height: bodyHeight, 
-      width: bodyWidth,
-
+      width: bodyWidth
     }
   );
 
