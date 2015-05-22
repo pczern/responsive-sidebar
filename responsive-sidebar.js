@@ -99,14 +99,9 @@ function Sidebar(sidebar, buttons, options){
                     'to {' + browserPrefix + 'opacity: ' + opacity + ' }'+
                   '}';
   if(animation){
-  if( document.styleSheets && document.styleSheets.length ) {
-      document.styleSheets[0].insertRule( closeSidebarKeyframes, 0 );
-      document.styleSheets[0].insertRule( openSidebarKeyframes, 0 );
-  } else {
     var s = document.createElement( 'style' );
     s.innerHTML = openSidebarKeyframes + ' ' + closeSidebarKeyframes + ' ' + fadeInKeyframes + ' ' + fadeOutKeyframes;
     document.getElementsByTagName( 'head' )[ 0 ].appendChild( s );
-  }
 }
 
 
@@ -213,7 +208,7 @@ function Sidebar(sidebar, buttons, options){
   }
 
   var toggleSidebar = function(){
-    if(isOpen){
+    if (isOpen){
       closeSidebar();
     }else{
       openSidebar();
@@ -251,7 +246,7 @@ function addClass(element, className){
 function addEventListener(el, eventName, handler) {
   if (el.addEventListener) {
     el.addEventListener(eventName, handler);
-  } else {
+  } else if(el.attachEvent){
     el.attachEvent('on' + eventName, function(){
       handler.call(el);
     });
@@ -260,7 +255,7 @@ function addEventListener(el, eventName, handler) {
 function removeEventListener(el, eventName, handler) {
   if (el.removeEventListener)
     el.removeEventListener(eventName, handler);
-  else
+  else if (el.detachEvent)
     el.detachEvent('on' + eventName, handler);
 }
 
