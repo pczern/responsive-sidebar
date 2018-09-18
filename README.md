@@ -3,7 +3,7 @@
 No dependencies and high performance.
 Supports most browsers including IE8**
 ## Demo
-Take a look at the Demo
+Take a look at the Demo  
 **DEMO(http://pczern.github.io/responsive-sidebar/demo/)**
 ## Usage
 Embed responsive-sidebar.js in your .html file
